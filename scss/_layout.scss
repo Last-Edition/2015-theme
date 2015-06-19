@@ -1,0 +1,155 @@
+// Theme Based styles
+
+header, footer, section {
+
+	@include clear();
+
+}
+
+.wrapper {
+
+	@include row;
+	width: 95%;
+
+}
+
+.sidebar, .third {
+
+	@include col( 12, false );
+
+	@include bp($tablet) {
+
+		@include col(4, false);
+
+	}
+
+}
+
+.twenty {
+
+	@include col( 12, false );
+
+	@include bp($desktop) {
+
+		@include col(2.4, false);
+
+	}
+
+}
+
+.quarter {
+
+	@include col( 12, false );
+
+	@include bp($tablet) {
+
+		@include col(3, false);
+
+	}
+
+}
+
+.half {
+
+	margin: 10px 0;
+
+	@include col( 12, false );
+
+	.half {
+
+		width: 100%;
+
+	}
+
+	@include bp($phone) {
+
+		.half {
+
+			width: 50%;
+
+		}
+		
+	}
+
+	@include bp($tablet) {
+
+		margin: 0;
+
+	}
+	
+	@include bp($desktop) {
+
+		@include col(6, false);
+
+		.half {
+
+			width: 50%;
+
+		}
+
+	}
+
+
+}
+
+.two-thirds {
+
+	@include col( 12, false );
+
+	@include bp($tablet) {
+
+		@include col(8, false);
+		padding: 0 1.5% 0 0;
+
+	}
+
+}
+
+.three-quarters {
+
+	@include col( 12, false );
+
+	@include bp($tablet) {
+
+		@include col(9, false);
+
+	}
+
+}
+
+.full {
+
+	@include col( 12, false );
+
+}
+
+.left {
+
+	@include bp($desktop) {
+
+		padding: 0 15px 0 0;
+
+	}
+
+
+}
+
+.middle {
+
+	@include bp($desktop) {
+
+		padding: 0 7.5px 0;
+
+	}
+
+}
+
+.right {
+
+	@include bp($desktop) {
+
+		padding: 0 0 0 15px;
+
+	}
+
+}

@@ -1,0 +1,85 @@
+section.gallery {
+
+	position: relative;
+
+	&:before {
+
+		content: '';
+		background: #D2DD96;
+		position: absolute;
+		z-index: -1;
+		top: 0; 
+		left: 0;
+		width: 100%;
+		height: 75px;
+
+	}
+
+	&:after {
+
+		content: '';
+		background: #fafafa;
+		position: absolute;
+		z-index: -1;
+		top: 75px; 
+		left: 0;
+		width: 100%;
+		height: 75px;
+		box-shadow: 0 5px 5px 5px #eee;
+
+	}
+	
+	.gallery-inner {
+
+		@include clear();
+		background: $thirdColour;
+		padding: $gridGutter;
+		margin: -20px 0 0; 
+
+	}
+	
+}
+
+.gallery-item {
+
+	@include col( 12, false );
+	text-align: center;
+	animation: grow 250ms ease-in-out 250ms forwards;
+	transition: all ease-in-out 0.2s;
+
+	@include bp($phone) {
+
+		@include col( 6, false );
+
+	}
+
+	@include bp($tablet) {
+
+		@include col( 4, false );
+
+	}
+
+	@include bp($desktop) {
+
+		@include col( 2, false );
+
+	}
+
+	img {
+
+		border-radius: 100%;
+		border: 5px solid darken( $primaryColour, 20% );
+
+	}
+
+}
+
+.load-gallery {
+	
+	&.active {
+
+		animation: fadeIn 500ms ease-in-out forwards;
+
+	}
+
+}

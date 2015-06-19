@@ -1,0 +1,183 @@
+.lightbox {
+
+	display: none;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba( $secondaryColour, 0.85 );
+	text-align: center;
+	animation: fadeIn 250ms ease-in-out backwards;
+	transform: translateZ(0);
+
+	&.active {
+
+		animation: fadeIn 250ms ease-in-out both;
+		display: inline-table !important;
+
+		.wpcf7 {
+
+			animation: slideDownFull 250ms ease-in-out forwards;
+
+		}
+
+	}
+
+	.lightbox-wrap {
+
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+
+		img { 
+
+			border: 4px solid #fff;
+			background: #333;
+			box-shadow: 0 0 15px #343434;
+			max-width: 90vw;
+		  	max-height: 90vh;
+			animation: grow 200ms ease 300ms both;
+
+		}
+
+		&:hover {
+
+			.lightboxNav {
+
+				opacity: 1;
+
+				&.next { 
+					
+					right: 0;
+
+				}
+
+				&.prev { 
+					
+					left: 0;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.lightboxNav {
+
+		position: absolute;
+		top: 45%;
+		z-index: 5;
+		color: #fff;
+		font-size: 2em;
+		opacity: 0;
+		background: $primaryColour;
+		color: #fff;
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		transition: all ease-in-out 0.2s;
+
+		&:hover {
+
+			background: darken( $primaryColour, 10% );
+
+		}
+
+		&.next { 
+			
+			right: -5%;
+
+			&:before {
+
+				font-family: 'FontAwesome';
+				content: '\e00a';
+
+			}
+
+		}
+
+		&.prev { 
+			
+			left: -5%;
+
+			&:before {
+
+				font-family: 'FontAwesome';
+				content: '\e003';
+
+			}
+
+		}
+
+	}
+
+	iframe {
+
+		max-width: 800px;
+		width: 100%;
+		height: ( 800px / 1.7779  );
+
+	}
+
+	.wpcf7 {
+
+		background: #fff;
+		padding: 15px 15px 5px;
+		border-radius: 3px;
+		margin: 0 auto;
+		max-width: 420px; 
+		width: 95%;
+		animation: slideDownFull 250ms ease-in-out backwards;
+
+		p {
+
+			text-align: left;
+			margin: 0 0 7.5px;
+
+		}
+
+	}
+
+}
+
+#closeLightbox {
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	background: $primaryColour;
+	color: #fff;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	transition: all ease-in-out 0.2s;
+
+	&:before {
+
+		font-family: 'FontAwesome';
+		content: '\f00d';
+		color: #fff;
+		font-size: 1.8em;
+
+	}
+
+	&:hover {
+
+		background: darken( $primaryColour, 10% );
+
+	}
+
+}
+
+.lightbox-container {
+
+	cursor: pointer;
+
+}

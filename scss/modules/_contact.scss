@@ -1,0 +1,92 @@
+section.contact {
+
+	position: relative;
+
+	&:before {
+
+		content: '';
+		background: #D2DD96;
+		position: absolute;
+		z-index: -1;
+		top: 0; 
+		left: 0;
+		width: 100%;
+		height: 75px;
+
+	}
+
+	&:after {
+
+		content: '';
+		background: #fafafa;
+		position: absolute;
+		z-index: -1;
+		top: 75px; 
+		left: 0;
+		width: 100%;
+		height: 75px;
+		box-shadow: 0 5px 5px 5px #eee;
+
+	}
+
+	iframe {
+
+		@include clear();
+		height: 320px;
+		margin: $gridGutter 0 0;
+
+	}
+
+}
+
+.contactinfo {
+
+	background: $primaryColour;
+	padding: $gridGutter;
+	margin: $gridGutter 0 0;
+
+	p, ul li, ul li a {
+
+		color: #fff;
+
+	}
+
+	h1, h2 {
+
+		color: #fff;
+		font-size: 2.2em;
+
+	}
+
+}
+
+.contact-form {
+
+	background:$thirdColour;
+	padding: $gridGutter;
+	margin: $gridGutter 0 0;
+	@include clear();
+
+	p {
+
+		color: $fontColour;
+		width: 100%;
+		margin: 0 0 10px;
+
+	}
+
+	input[type="text"], input[type="email"] {
+
+		width: 100%;
+		background: #fff;
+		color: $fontColour;
+		margin: 5px 0 0;
+
+	}
+
+	textarea {
+	
+		color: $fontColour;
+
+	}
+}

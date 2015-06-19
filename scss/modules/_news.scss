@@ -1,0 +1,47 @@
+.newsbox {
+	
+	background: $fontColour;
+	@include clear();
+	padding: $gridGutter;
+
+	p { 
+
+		color: #f7f7f7;
+		font-family: $titleFont;
+		font-weight: 900;
+
+		&#newshead {
+
+			font-size: 1.75em;
+
+		}
+
+	}
+
+	a {
+
+		color: $primaryColour;
+		font-family: $titleFont;
+
+	}
+
+}
+
+.sidebar {
+
+	.sidebar-inner	{
+
+		background: $thirdColour;
+		padding: $gridGutter;
+		@include clear();
+
+		.widget-container {
+
+			@include clear();
+			margin: 0 0 $gridGutter;
+
+		}
+
+	}
+	
+}

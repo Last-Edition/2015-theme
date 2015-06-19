@@ -1,0 +1,86 @@
+/* Global Styles */
+
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	overflow-y: scroll;	
+}
+
+*, *:after, *:before {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+}
+
+body {
+	background: #fff;
+	font-family: $primaryFont;
+	font-size: 62.5%;
+	@include text-size-adjust(100%);
+	-webkit-font-smoothing: antialiased;
+	line-height:2.4em;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+	&.blur {
+
+		filter: blur(20px);
+
+	}
+
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+img {
+
+	max-width: 100%;
+	border: none;
+	image-rendering: -moz-crisp-edges;         /* Firefox */
+	image-rendering:   -o-crisp-edges;         /* Opera */
+	image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+	
+}
+
+/* Clearings */
+.wrap, .wrapper, .clear, .entry-content, .comment-content, .site-header, .site-content, .site-footer, .clearfix {
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+}
+.wrap, .wrapper, .clear, .entry-content, .comment-content, .site-header, .site-content, .site-footer, .clearfix {
+	&:before {
+		clear: both;
+	}
+}
+
+.hidden {
+	
+	display: none;
+
+}

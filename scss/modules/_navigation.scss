@@ -1,0 +1,140 @@
+/* Navigation Styles */
+
+#site-navigation {
+	
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba( $primaryColour, 0.9 );
+	padding: 5% 0 0;
+
+	// when nav is active
+	&.active {
+
+		display: block;
+
+	}
+
+	ul {
+
+		display: block;
+
+	}
+
+	li { 
+		
+		display: block;
+		text-align: center;
+
+	}
+
+	a { 
+
+		color: #fff;
+		text-transform: uppercase;
+		transition: all ease-in-out 0.2s;
+		font-size: 2em;
+		padding: $gridGutter;
+		@include clear();
+
+		&:hover { 
+
+			background: $secondaryColour;
+
+		}
+
+	}
+
+	/* 
+
+	---- DESKTOP MENU
+	---- input styles for desktop only
+	
+	*/
+
+	@include bp($desktop) {
+
+		display: block;
+		float: right;
+		width: auto;
+		position: relative;
+		background: none;
+		padding: 0;
+
+		li { 
+
+			display: inline-block;
+			float: left;
+	
+		}
+
+		a {
+
+			float: left;
+			padding: 22px;
+			width: 100%;
+			text-align: center;
+			line-height: 18px;
+			font-size: inherit;
+
+			&:hover { 
+
+				background: $primaryColour;
+
+			}
+
+		}
+	
+	}
+
+	.toggle-nav {
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		color: #fff;
+		text-align: center;
+		padding: 0;
+		background: darken( $primaryColour, 15% );
+
+		&:before {
+
+			font-family: Flaticon;
+			content: '\e005';
+
+		}
+
+	}
+
+}
+
+.toggle-nav {
+
+	float: right;
+	text-align: center;
+	padding: $gridGutter;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: all ease-in-out 0.2s;
+
+	&:hover {
+
+		background: $primaryColour;
+		color: #fff;
+
+	}
+
+	@include bp($desktop) {
+
+		display: none;
+
+	}
+
+}
